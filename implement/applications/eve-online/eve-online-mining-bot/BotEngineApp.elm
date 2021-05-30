@@ -257,7 +257,7 @@ continueIfShouldHide config context =
                             |> List.filter (chatUserHasGoodStanding >> not)
                 in
                 if 1 < (subsetOfUsersWithNoGoodStanding |> List.length) then
-                    Just (describeBranch "There is an enemy or neutral in local chat." config.ifShouldHide)
+                    Nothing
 
                 else
                     Nothing
